@@ -1,0 +1,89 @@
+Git commands I used (DUVVURU SHATHWIK REDDY, 2024EB01996)
+Repo: https://github.com/shasudo/git-workflow-assignment-2024eb01996
+
+1. git init
+   Started a new git repo in my project folder.
+
+2. git branch -M main
+   Renamed the branch to main.
+
+3. git add index.html about.html
+   Added both html files to staging.
+
+4. git commit -m "Initial commit: add index.html and about.html"
+   Saved them as the first commit.
+
+5. git add index.html
+   Staged index.html after I edited it (added features section).
+
+6. git commit -m "Update index.html: add features section"
+   Second commit for the index.html change.
+
+7. git branch feature
+   Made a new branch called feature.
+
+8. git switch feature
+   Moved to the feature branch.
+
+9. git add about.html
+   Staged about.html which I changed on feature branch.
+
+10. git commit -m "Feature: update about page with team section"
+    Committed the about.html change on feature.
+
+11. git switch main
+    Went back to main branch.
+
+12. git merge feature --no-ff -m "Merge feature branch into main"
+    Merged feature into main. Used --no-ff so the merge commit stays visible.
+
+13. git log --oneline --graph --all
+    Checked history with graph to see branches and merges.
+
+14. git log --pretty=format:"%h | %an | %ad | %s" --date=short
+    Saw full log with hash, name, date and message.
+
+15. git status
+    Checked what is staged / unstaged / untracked.
+
+16. git status --ignored
+    Also showed ignored files, to prove .gitignore works.
+
+17. git branch -a
+    Listed all local and remote branches.
+
+18. git add .gitignore
+    Staged the .gitignore file.
+
+19. git commit -m "Add .gitignore to ignore .log files and temp folder"
+    Committed the gitignore file.
+
+20. git add undo_demo.txt
+    Staged a temp file for the undo demo.
+
+21. git commit -m "Add undo_demo file (commit to be undone)"
+    Extra commit which I then undid.
+
+22. git reset --soft HEAD~1
+    Undid the last commit but kept the file staged.
+
+23. git diff --cached --stat
+    Checked what was still staged after reset.
+
+24. git reset HEAD undo_demo.txt
+    Unstaged the demo file so I could delete it.
+
+25. git remote -v
+    Saw which remote is connected.
+
+26. gh repo create git-workflow-assignment-2024eb01996 --public --source=. --push
+    Created my public repo on GitHub and pushed to it.
+
+27. git push -u origin main
+    Pushed main branch to GitHub.
+
+28. git push -u origin feature
+    Pushed feature branch too, so both are visible on GitHub.
+
+29. git log origin/main --oneline --graph --all
+    Compared remote history with local to confirm same.
